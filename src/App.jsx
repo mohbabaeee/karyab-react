@@ -15,33 +15,42 @@ import EditJobPage from "./pages/EditJobPage";
 const App = () => {
   // Add job
   const addJob = async (newJob) => {
-    const res = await fetch("/api/jobs", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newJob),
-    });
+    const res = await fetch(
+      "https://my-json-server.typicode.com/tinykocholo/karyab-react-json/jobs/",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newJob),
+      }
+    );
     return;
   };
 
   // Delete job
   const deleteJob = async (id) => {
-    const res = await fetch(`/api/jobs/${id}`, {
-      method: "DELETE",
-    });
+    const res = await fetch(
+      `https://api.npoint.io/c52856f85451cfce135d/jobs/${id}`,
+      {
+        method: "DELETE",
+      }
+    );
     return;
   };
 
   // Edit job
   const editJob = async (job) => {
-    const res = await fetch(`/api/jobs/${job.id}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(job),
-    });
+    const res = await fetch(
+      `https://api.npoint.io/c52856f85451cfce135d/jobs/${job.id}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(job),
+      }
+    );
     return;
   };
 

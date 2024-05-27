@@ -104,39 +104,11 @@ const JobPage = ({ deleteJob }) => {
 };
 
 const jobLoader = async ({ params }) => {
-  const res = await fetch(`/api/jobs/${params.id}`);
+  const res = await fetch(
+    `https://my-json-server.typicode.com/tinykocholo/karyab-react-json/jobs/${params.id}`
+  );
   const data = await res.json();
   return data;
 };
 
 export { JobPage as default, jobLoader };
-
-// import { useEffect, useState } from "react";
-// import Spinner from "../components/Spinner";
-// import { useParams } from "react-router-dom";
-
-// const JobPage = () => {
-//   const { id } = useParams();
-//   const [job, setJobs] = useState([]);
-//   const [loading, setLoading] = useState(true);
-
-//   useEffect(() => {
-//     const fetchJobs = async () => {
-//       try {
-//         const res = await fetch(`/api/jobs/${id}`);
-//         const data = await res.json();
-//         setJobs(data);
-//       } catch (error) {
-//         console.log("Error fetching data", error);
-//       } finally {
-//         setLoading(false);
-//       }
-//     };
-
-//     fetchJobs();
-//   }, []);
-
-//   return loading ? <Spinner /> : <h1>{job.title}</h1>;
-// };
-
-// export default JobPage;

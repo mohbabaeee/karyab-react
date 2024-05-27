@@ -7,7 +7,9 @@ const JobListings = ({ ishome = false }) => {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     const fetchJobs = async () => {
-      const apiUrl = ishome ? "api/jobs?_limit=3" : "api/jobs";
+      const apiUrl = ishome
+        ? "https://my-json-server.typicode.com/tinykocholo/karyab-react-json/jobs?_limit=3"
+        : "https://my-json-server.typicode.com/tinykocholo/karyab-react-json/jobs";
       try {
         const res = await fetch(apiUrl);
         const data = await res.json();
