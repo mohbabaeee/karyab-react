@@ -19,78 +19,92 @@ const JobPage = ({ deleteJob }) => {
   };
 
   return (
-    <>
+    <div className="dark:bg-gray-900">
       <section>
-        <div className="container m-auto py-6 px-6">
-          <Link
-            to="/jobs"
-            className="text-green-500 hover:text-green-600 flex items-center"
-          >
-            <FaArrowRight className="ml-2" /> برگشت به لیست مشاغل
+        <div className="container m-auto py-4 px-6 mt-16 text-purple-600 hover:text-purple-700 dark:text-purple-300 dark:hover:text-purple-400">
+          <Link to="/jobs" className="flex items-center">
+            <FaArrowRight className="ml-2" />
+            بازگشت به لیست مشاغل
           </Link>
         </div>
       </section>
 
-      <section className="bg-green-50">
-        <div className="container m-auto py-10 px-6">
+      <section>
+        <div className="container m-auto pb-10 px-6">
           <div className="grid grid-cols-1 lg:grid-cols-70/30 w-full gap-6">
             <main>
-              <div className="bg-white p-6 rounded-lg shadow-md text-center md:text-right">
-                <div className="text-gray-500 mb-4">{job.type}</div>
-                <h1 className="text-3xl font-bold mb-4">{job.title}</h1>
+              <div className="p-6 rounded-lg shadow-sm border text-center md:text-right bg-gray-50 dark:bg-gray-800 dark:border-gray-500">
+                <div className="text-gray-500 mb-4 dark:text-gray-300">
+                  {job.type}
+                </div>
+                <h1 className="text-3xl font-bold mb-4 dark:text-gray-200">
+                  {job.title}
+                </h1>
                 <div className="text-gray-500 mb-4 flex align-middle justify-center md:justify-start">
-                  <FaLocationDot className="text-lg text-orange-700 ml-2" />
-                  <p className="text-orange-700">{job.location}</p>
+                  <FaLocationDot className="text-lg text-orange-700 ml-2 dark:text-red-500" />
+                  <p className="text-orange-700 dark:text-red-500">
+                    {job.location}
+                  </p>
                 </div>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-md mt-6">
-                <h3 className="text-green-800 text-lg font-bold mb-6">
+              <div className="p-6 rounded-lg shadow-sm border mt-6 bg-gray-50 dark:bg-gray-800 dark:border-gray-500 ">
+                <h3 className="text-purple-500 text-lg font-bold mb-6 dark:text-purple-400">
                   توضیحات
                 </h3>
 
-                <p className="mb-4">{job.description}</p>
+                <p className="mb-4 dark:text-gray-200">{job.description}</p>
 
-                <h3 className="text-green-800 text-lg font-bold mb-2">حقوق</h3>
+                <h3 className="text-purple-500 text-lg font-bold mb-2 dark:text-purple-400">
+                  حقوق
+                </h3>
 
-                <p className="mb-4">{job.salary}</p>
+                <p className="mb-4 dark:text-gray-200">{job.salary}</p>
               </div>
             </main>
 
             <aside>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold mb-6">مشخصات شرکت</h3>
+              <div className="p-6 rounded-lg shadow-sm border bg-gray-50 dark:bg-gray-800 dark:border-gray-500 dark:text-gray-200">
+                <h3 className="text-xl font-bold mb-6 dark:text-gray-100">
+                  مشخصات شرکت
+                </h3>
 
                 <h2 className="text-2xl">{job.company.name}</h2>
 
                 <p className="my-2">{job.company.description}</p>
 
-                <hr className="my-4" />
+                <hr className="my-4 dark:border-gray-500" />
 
                 <h3 className="text-xl">آدرس ایمیل:</h3>
 
-                <p className="my-2 bg-green-100 p-2 font-bold">
-                  {job.company.contactEmail}
+                <p className="my-2 p-2 font-bold rounded-lg text-left">
+                  <a href={`mailto:` + job.company.contactEmail}>
+                    {job.company.contactEmail}
+                  </a>
                 </p>
 
                 <h3 className="text-xl">شماره تلفن:</h3>
 
-                <p className="my-2 bg-green-100 p-2 font-bold">
-                  {job.company.contactPhone}
+                <p className="my-2 p-2 font-bold rounded-lg text-left">
+                  <a href={`tel:` + job.company.contactPhone}>
+                    {job.company.contactPhone}
+                  </a>
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-md mt-6">
-                <h3 className="text-xl font-bold mb-6">مدیریت آگهی</h3>
+              <div className="p-6 rounded-lg shadow-sm border mt-6 bg-gray-50 dark:bg-gray-800 dark:border-gray-500">
+                <h3 className="text-xl font-bold mb-6 dark:text-white">
+                  مدیریت آگهی
+                </h3>
                 <Link
                   to={`/edit-job/${job.id}`}
-                  className="bg-green-500 hover:bg-green-600 text-white text-center font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block"
+                  className="bg-purple-600 hover:bg-purple-400 text-white text-center font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block"
                 >
                   ویرایش
                 </Link>
                 <button
                   onClick={() => onDeleteClick(job.id)}
-                  className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block"
+                  className="w-full text-gray-900 rounded-full px-4 py-2 hover:bg-gray-100 hover:text-purple-600 border bg-white dark:bg-gray-900 dark:text-gray-300 dark:hover:text-gray-100 dark:hover:bg-gray-600 dark:border-gray-500 mt-3"
                 >
                   حذف
                 </button>
@@ -99,7 +113,7 @@ const JobPage = ({ deleteJob }) => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

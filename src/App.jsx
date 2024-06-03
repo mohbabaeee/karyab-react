@@ -53,7 +53,6 @@ const App = () => {
     );
     return;
   };
-
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<MainLayout />}>
@@ -74,6 +73,7 @@ const App = () => {
       </Route>
     )
   );
+
   return <RouterProvider router={router} />;
 };
 

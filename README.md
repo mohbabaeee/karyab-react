@@ -5,14 +5,23 @@ Job Finding Front-End
 - Modern and User Friendly
 - Built with React (Vite) and Tailwind
 
-[![](https://img.shields.io/badge/Live_At-KaryabApp.ir-green.svg)](https://karyabapp.ir)\
-[![](https://img.shields.io/badge/Live_At-Karyab.liara.run-red.svg)](https://karyab.liara.run)
-
 features that the app lacks?
 
-- Fetch JSON file when deployed (Now fetching just works on local :sweat_smile: )
-- Darkmode
+- ✅ ~~Darkmode~~ (in 404 page darkmode disables?? (but it can activated manualy))
+- ✅ ~~Fixed-top-navbar~~
+- better JSON fetching ( Now JSON fetches from my github repo and you cant add or delete data😅)
 - Categories by Job fields and City
 - Search by Title
-- Fixed-top-navbar
 - Hamburger menu on the Phone
+- There is 404 Page but it should be **Without** Navbar and Footer
+
+Used Packages:
+
+- react-icons
+- react-router-dom
+- react-spinners
+- react-toastify
+- react-toggle-dark-mode
+
+[![](https://img.shields.io/badge/Live_At-KaryabApp.ir-green.svg)](https://karyabapp.ir)\
+[![](https://img.shields.io/badge/Live_At-Karyab.liara.run-red.svg)](https://karyab.liara.run)

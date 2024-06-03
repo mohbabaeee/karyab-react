@@ -1,14 +1,14 @@
 import Hero from "../components/Hero";
 import HomeCards from "../components/HomeCards";
-import JobListings from "../components/JobListings";
 import ViewAll from "../components/ViewAll";
+import JobsPage from "./JobsPage";
 
 const HomePage = () => {
   return (
     <>
       <Hero />
       <HomeCards />
-      <JobListings ishome={true} />
+      <JobsPage ishome={true} />
       <ViewAll />
     </>
   );

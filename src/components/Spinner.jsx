@@ -8,7 +8,7 @@ const override = {
 const Spinner = ({ loading }) => {
   return (
     <HashLoader
-      color="#15803d"
+      color="#7e22ce"
       loading={loading}
       cssOverride={override}
       size={150}

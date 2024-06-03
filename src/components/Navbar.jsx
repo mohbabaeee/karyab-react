@@ -1,19 +1,27 @@
-import logo from "../assets/images/logo.png";
+import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { DarkModeSwitch } from "react-toggle-dark-mode";
+import { FcBinoculars } from "react-icons/fc";
 
-const Navbar = () => {
+const Navbar = ({ toggleDark }) => {
+  const [isDarkMode, setDarkMode] = useState(false);
+  const toggleDarkMode = (checked) => {
+    setDarkMode(checked);
+    toggleDark();
+  };
+
   const linkClass = ({ isActive }) =>
     isActive
-      ? "text-white bg-black hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 font-bold "
-      : "text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 font-bold";
+      ? "text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-300 rounded-md p-2 px-3 font-bold ring-4 ring-gray-200 dark:ring-gray-600"
+      : "text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-300 rounded-md p-2 px-3 font-bold";
 
   return (
-    <nav className="bg-green-700 border-b border-green-500">
-      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div className="flex h-20 items-center justify-between">
-          <div className="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
+    <nav className="border-b fixed w-full top-0 bg-white z-10 dark:bg-gray-900 dark:border-gray-700">
+      <div className="mx-auto px-2 sm:px-6 lg:px-8">
+        <div className="flex h-16 items-center justify-between">
+          <div className="flex flex-1 items-center justify-between md:items-stretch md:justify-start">
             <div className="md:ml-auto">
-              <div className="flex space-x-2 gap-2">
+              <div className="flex gap-2">
                 <NavLink to="/" className={linkClass}>
                   خانه
                 </NavLink>
@@ -23,13 +31,22 @@ const Navbar = () => {
                 <NavLink to="/addJob" className={linkClass}>
                   درج آگهی
                 </NavLink>
+                <button className="px-2 rounded-lg dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-100 bg-white lg:mr-4">
+                  <DarkModeSwitch
+                    sunColor="#6B7280"
+                    moonColor="#6B7280"
+                    checked={isDarkMode}
+                    onChange={toggleDarkMode}
+                    size={24}
+                  />
+                </button>
               </div>
             </div>
-            <Link className="flex flex-shrink-0 items-center mr-4" to="/">
-              <span className="hidden md:block text-white text-2xl font-bold ml-2">
-                Karyab
+            <Link className="flex flex-shrink-0 items-center ml-2" to="/">
+              <span className="hidden md:block text-gray-900 text-2xl font-bold ml-4 dark:text-gray-200">
+                کاریاب
               </span>
-              <img className="h-10 w-auto " src={logo} alt="React Jobs" />
+              <FcBinoculars className="text-4xl" />
             </Link>
           </div>
         </div>

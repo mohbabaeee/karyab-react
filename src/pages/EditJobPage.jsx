@@ -46,25 +46,25 @@ const EditJobPage = ({ editJobSubmit }) => {
   };
 
   return (
-    <section className="bg-green-50">
+    <section className="dark:bg-gray-900">
       <div className="container m-auto max-w-2xl py-24">
-        <div className="bg-white px-6 py-8 mb-4 shadow-md rounded-md border m-4 md:m-0">
+        <div className="bg-gray-50 px-6 py-8 mb-4 shadow-sm text-gray-900 border rounded-md m-4 md:m-0 dark:bg-gray-800 dark:border-gray-500">
           <form onSubmit={submitForm}>
-            <h2 className="text-3xl text-center font-semibold mb-6">
+            <h2 className="text-3xl text-center font-semibold mb-6 dark:text-gray-200">
               ویرایش کردن آگهی
             </h2>
 
             <div className="mb-4">
               <label
                 htmlFor="type"
-                className="block text-gray-700 font-bold mb-2"
+                className="block text-gray-700 font-bold mb-2 dark:text-gray-300"
               >
                 نوع همکاری
               </label>
               <select
                 id="type"
                 name="type"
-                className="border rounded w-full py-2 px-3"
+                className="border rounded w-full py-2 px-3 dark:bg-gray-900 dark:border-gray-500 dark:text-gray-200"
                 required
                 value={type}
                 onChange={(e) => setType(e.target.value)}
@@ -77,14 +77,14 @@ const EditJobPage = ({ editJobSubmit }) => {
             </div>
 
             <div className="mb-4">
-              <label className="block text-gray-700 font-bold mb-2">
+              <label className="block text-gray-700 font-bold mb-2 dark:text-gray-300">
                 عنوان شغلی
               </label>
               <input
                 type="text"
                 id="title"
                 name="title"
-                className="border rounded w-full py-2 px-3 mb-2"
+                className="border rounded w-full py-2 px-3 mb-2 dark:bg-gray-900 dark:border-gray-500 dark:text-gray-200"
                 placeholder="مثال: توسعه‌دهنده وب"
                 required
                 value={title}
@@ -94,14 +94,14 @@ const EditJobPage = ({ editJobSubmit }) => {
             <div className="mb-4">
               <label
                 htmlFor="description"
-                className="block text-gray-700 font-bold mb-2"
+                className="block text-gray-700 font-bold mb-2 dark:text-gray-300"
               >
                 توضیحات
               </label>
               <textarea
                 id="description"
                 name="description"
-                className="border rounded w-full py-2 px-3"
+                className="border rounded w-full py-2 px-3 dark:bg-gray-900 dark:border-gray-500 dark:text-gray-200"
                 rows="4"
                 placeholder="وظایف شغلی و نیازمندی های مورد نظر را بنویسید"
                 value={description}
@@ -112,14 +112,14 @@ const EditJobPage = ({ editJobSubmit }) => {
             <div className="mb-4">
               <label
                 htmlFor="type"
-                className="block text-gray-700 font-bold mb-2"
+                className="block text-gray-700 font-bold mb-2 dark:text-gray-300"
               >
                 حقوق
               </label>
               <select
                 id="salary"
                 name="salary"
-                className="border rounded w-full py-2 px-3"
+                className="border rounded w-full py-2 px-3 dark:bg-gray-900 dark:border-gray-500 dark:text-gray-200"
                 required
                 value={salary}
                 onChange={(e) => setSalary(e.target.value)}
@@ -157,12 +157,14 @@ const EditJobPage = ({ editJobSubmit }) => {
             </div>
 
             <div className="mb-4">
-              <label className="block text-gray-700 font-bold mb-2">آدرس</label>
+              <label className="block text-gray-700 font-bold mb-2 dark:text-gray-300">
+                آدرس
+              </label>
               <input
                 type="text"
                 id="location"
                 name="location"
-                className="border rounded w-full py-2 px-3 mb-2"
+                className="border rounded w-full py-2 px-3 mb-2 dark:bg-gray-900 dark:border-gray-500 dark:text-gray-200"
                 placeholder="مثال: تهران، سعادت‌آباد"
                 required
                 value={location}
@@ -170,12 +172,12 @@ const EditJobPage = ({ editJobSubmit }) => {
               />
             </div>
 
-            <h3 className="text-2xl mb-5">مشخصات شرکت</h3>
+            <h3 className="text-2xl mb-5 dark:text-gray-300">مشخصات شرکت</h3>
 
             <div className="mb-4">
               <label
                 htmlFor="company"
-                className="block text-gray-700 font-bold mb-2"
+                className="block text-gray-700 font-bold mb-2 dark:text-gray-300"
               >
                 نام شرکت
               </label>
@@ -183,7 +185,7 @@ const EditJobPage = ({ editJobSubmit }) => {
                 type="text"
                 id="company"
                 name="company"
-                className="border rounded w-full py-2 px-3"
+                className="border rounded w-full py-2 px-3 dark:bg-gray-900 dark:border-gray-500 dark:text-gray-200"
                 placeholder="مثال: لیارا"
                 value={companyName}
                 onChange={(e) => setCompanyName(e.target.value)}
@@ -193,14 +195,14 @@ const EditJobPage = ({ editJobSubmit }) => {
             <div className="mb-4">
               <label
                 htmlFor="company_description"
-                className="block text-gray-700 font-bold mb-2"
+                className="block text-gray-700 font-bold mb-2 dark:text-gray-300"
               >
                 توضیحات شرکت
               </label>
               <textarea
                 id="company_description"
                 name="company_description"
-                className="border rounded w-full py-2 px-3"
+                className="border rounded w-full py-2 px-3 dark:bg-gray-900 dark:border-gray-500 dark:text-gray-200"
                 rows="4"
                 placeholder="فعالیت شرکت خود را توضیح دهید"
                 value={companyDescription}
@@ -211,7 +213,7 @@ const EditJobPage = ({ editJobSubmit }) => {
             <div className="mb-4">
               <label
                 htmlFor="contact_email"
-                className="block text-gray-700 font-bold mb-2"
+                className="block text-gray-700 font-bold mb-2 dark:text-gray-300"
               >
                 ایمیل شرکت
               </label>
@@ -219,7 +221,7 @@ const EditJobPage = ({ editJobSubmit }) => {
                 type="email"
                 id="contact_email"
                 name="contact_email"
-                className="border rounded w-full py-2 px-3"
+                className="border rounded w-full py-2 px-3 dark:bg-gray-900 dark:border-gray-500 dark:text-gray-200"
                 placeholder="آدرس ایمیل شرکت برای ارسال درخواست همکاری"
                 required
                 value={companyContactEmail}
@@ -229,7 +231,7 @@ const EditJobPage = ({ editJobSubmit }) => {
             <div className="mb-4">
               <label
                 htmlFor="contact_phone"
-                className="block text-gray-700 font-bold mb-2"
+                className="block text-gray-700 font-bold mb-2 dark:text-gray-300"
               >
                 آدرس تلفن
               </label>
@@ -237,7 +239,7 @@ const EditJobPage = ({ editJobSubmit }) => {
                 type="tel"
                 id="contact_phone"
                 name="contact_phone"
-                className="border rounded w-full py-2 px-3"
+                className="border rounded w-full py-2 px-3 dark:bg-gray-900 dark:border-gray-500 dark:text-gray-200"
                 value={companyContactPhone}
                 onChange={(e) => setCompanyContactPhone(e.target.value)}
               />
@@ -245,14 +247,14 @@ const EditJobPage = ({ editJobSubmit }) => {
 
             <div className="flex flex-row gap-5">
               <button
-                className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline"
+                className="w-full text-gray-900 rounded-full px-4 py-2 hover:bg-gray-100 border bg-white dark:bg-gray-900 dark:text-gray-300 dark:hover:text-gray-100 dark:hover:bg-gray-600 dark:border-gray-500"
+                onClick={() => navigate("/jobs")}
                 type="button"
-                onClick={() => navigate(`/jobs/${id}`)}
               >
                 لفو ویرایش
               </button>
               <button
-                className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline"
+                className="w-full bg-purple-700 text-white rounded-full px-4 py-2 hover:bg-purple-500"
                 type="submit"
               >
                 ویرایش آگهی
