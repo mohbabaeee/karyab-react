@@ -15,13 +15,5 @@ features that the app lacks?
 - Hamburger menu on the Phone
 - There is 404 Page but it should be **Without** Navbar and Footer
 
-Used Packages:
-
-- react-icons
-- react-router-dom
-- react-spinners
-- react-toastify
-- react-toggle-dark-mode
-
 [![](https://img.shields.io/badge/Live_At-KaryabApp.ir-green.svg)](https://karyabapp.ir)\
 [![](https://img.shields.io/badge/Live_At-Karyab.liara.run-red.svg)](https://karyab.liara.run)
