@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 const HomeCards = () => {
   return (
-    <section className="py-4 dark:bg-gray-900">
-      <div className="container-xl lg:container m-auto">
+    <section>
+      <div className="container-xl lg:container m-auto  animate-slidein800 opacity-0">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 rounded-lg">
           <div className="p-6 rounded-lg shadow-sm text-gray-900 border bg-gray-50 dark:bg-gray-800 dark:border-gray-500 dark:text-white">
             <h2 className="text-2xl font-bold">کارجو هستی؟</h2>

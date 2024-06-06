@@ -1,23 +1,38 @@
-import { Outlet, useLocation, useNavigate } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/ReactToastify.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const MainLayout = () => {
-  // Dark Mode
-  const [isDark, setDark] = useState(false);
+  const location = useLocation();
+  // Initialize state for dark mode from local storage or default to false
+  const [isDark, setDark] = useState(() => {
+    const savedMode = localStorage.getItem("darkMode");
+    return savedMode ? JSON.parse(savedMode) : false;
+  });
+
+  // Sync state with local storage whenever it changes
+  useEffect(() => {
+    localStorage.setItem("darkMode", JSON.stringify(isDark));
+  }, [isDark]);
+
   const toggleDark = () => {
     setDark(!isDark);
   };
 
+  // Check if the current route is a known route
+  let isKnownRoute =
+    ["/", "/jobs", "/edit-job", "/addJob"].includes(location.pathname) ||
+    /^\/jobs\/\d+$/.test(location.pathname);
+
   return (
     <div className={isDark ? "dark" : ""}>
-      <Navbar toggleDark={toggleDark} />
+      {isKnownRoute && <Navbar toggleDark={toggleDark} />}
       <Outlet />
       {isDark ? <ToastContainer rtl theme="dark" /> : <ToastContainer rtl />}
-      <Footer />
+      {isKnownRoute && <Footer />}
     </div>
   );
 };

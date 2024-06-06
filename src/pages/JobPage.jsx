@@ -21,7 +21,7 @@ const JobPage = ({ deleteJob }) => {
   return (
     <div className="dark:bg-gray-900">
       <section>
-        <div className="container m-auto py-4 px-6 mt-16 text-purple-600 hover:text-purple-700 dark:text-purple-300 dark:hover:text-purple-400">
+        <div className="container m-auto pr-6 pt-20 pb-4 text-purple-600 hover:text-purple-700 dark:text-purple-300 dark:hover:text-purple-400">
           <Link to="/jobs" className="flex items-center">
             <FaArrowRight className="ml-2" />
             بازگشت به لیست مشاغل

@@ -26,14 +26,18 @@ const JobsPage = ({ ishome = false }) => {
 
   return (
     <section
-      className={`px-4 lg:px-10 py-10 dark:bg-gray-900 ${!ishome && "mt-16"}`}
+      className={`px-4 lg:px-10 py-10 ${!ishome && "pt-24 dark:bg-gray-900"}`}
     >
       <div className="container-xl lg:container m-auto">
-        <h2 className="text-3xl font-bold text-black mb-6 text-center dark:text-gray-100">
+        <h2
+          className={`text-3xl font-bold text-black mb-6 text-center dark:text-gray-100 ${
+            loading && "mb-24"
+          }`}
+        >
           {ishome ? "آگهی های اخیر" : "لیست آگهی‌ها"}
         </h2>
         {loading ? (
-          <Spinner loading={loading} />
+          <Spinner loading />
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {jobs.map((job) => (
