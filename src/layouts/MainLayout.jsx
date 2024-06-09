@@ -28,7 +28,7 @@ const MainLayout = () => {
     /^\/jobs\/\d+$/.test(location.pathname);
 
   return (
-    <div className={isDark ? "dark" : ""}>
+    <div className={`flex flex-col min-h-screen ${isDark ? "dark" : ""}`}>
       {isKnownRoute && <Navbar toggleDark={toggleDark} />}
       <Outlet />
       {isDark ? <ToastContainer rtl theme="dark" /> : <ToastContainer rtl />}

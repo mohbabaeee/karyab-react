@@ -30,9 +30,7 @@ const JobsPage = ({ ishome = false }) => {
     >
       <div className="container-xl lg:container m-auto">
         <h2
-          className={`text-3xl font-bold text-black mb-6 text-center dark:text-gray-100 ${
-            loading && "mb-24"
-          }`}
+          className={`text-3xl font-bold text-black mb-6 text-center dark:text-gray-100`}
         >
           {ishome ? "آگهی های اخیر" : "لیست آگهی‌ها"}
         </h2>

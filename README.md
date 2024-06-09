@@ -3,6 +3,7 @@
 Job Finding Front-End
 
 - Modern and User Friendly
+- Fully Responsive
 - Built with React (Vite) and Tailwind
 
 Features that the app lacks?
@@ -15,5 +16,4 @@ Features that the app lacks?
 - ✅ ~~Fixed-top-navbar~~
 - ✅ ~~Hamburger menu on the Phone~~
 
-[![](https://img.shields.io/badge/Live_At-KaryabApp.ir-green.svg)](https://karyabapp.ir)\
-[![](https://img.shields.io/badge/Live_At-Karyab.liara.run-red.svg)](https://karyab.liara.run)
+[![](https://img.shields.io/badge/Live_At-KaryabApp.ir-green.svg)](https://karyabapp.ir)
