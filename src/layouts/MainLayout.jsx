@@ -25,7 +25,8 @@ const MainLayout = () => {
   // Check if the current route is a known route
   let isKnownRoute =
     ["/", "/jobs", "/edit-job", "/addJob"].includes(location.pathname) ||
-    /^\/jobs\/\d+$/.test(location.pathname);
+    /^\/jobs\/\d+$/.test(location.pathname) ||
+    /^\/edit-job\/\d+$/.test(location.pathname);
 
   return (
     <div className={`flex flex-col min-h-screen ${isDark ? "dark" : ""}`}>

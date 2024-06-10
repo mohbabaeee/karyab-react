@@ -16,7 +16,7 @@ const App = () => {
   // Add job
   const addJob = async (newJob) => {
     const res = await fetch(
-      "https://my-json-server.typicode.com/tinykocholo/karyab-react-json/jobs/",
+      "https://api.npoint.io/c52856f85451cfce135d/jobs/",
       {
         method: "POST",
         headers: {

@@ -119,7 +119,7 @@ const JobPage = ({ deleteJob }) => {
 
 const jobLoader = async ({ params }) => {
   const res = await fetch(
-    `https://my-json-server.typicode.com/tinykocholo/karyab-react-json/jobs/${params.id}`
+    `https://api.npoint.io/c52856f85451cfce135d/jobs/${params.id}`
   );
   const data = await res.json();
   return data;
