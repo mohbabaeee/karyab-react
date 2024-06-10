@@ -1,7 +1,7 @@
+import icon from "../../public/logo.png";
 import { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
-import { FcBinoculars } from "react-icons/fc";
 import Hamburger from "hamburger-react";
 import { FaHome, FaSearch } from "react-icons/fa";
 import { FaPencil } from "react-icons/fa6";
@@ -119,7 +119,7 @@ const Navbar = ({ toggleDark }) => {
               <span className="text-gray-900 text-3xl font-bold ml-4 dark:text-gray-200">
                 کاریاب
               </span>
-              <FcBinoculars className="text-4xl" />
+              <img src={icon} className="w-10" />
             </Link>
           </div>
         </div>
