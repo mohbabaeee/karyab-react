@@ -8,7 +8,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Shabnam", "Roboto", "sans-serif"],
+        sans: ["Vazirmatn", "sans-serif"],
       },
       // Job page Columns
       gridTemplateColumns: {
