@@ -1,4 +1,4 @@
-import icon from "../../public/logo.png";
+import icon from "/logo.png";
 import { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { DarkModeSwitch } from "react-toggle-dark-mode";

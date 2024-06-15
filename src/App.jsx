@@ -16,7 +16,7 @@ const App = () => {
   // Add job
   const addJob = async (newJob) => {
     const res = await fetch(
-      "https://api.npoint.io/c52856f85451cfce135d/jobs/",
+      "https://my-json-server.typicode.com/tinykocholo/karyab-react/jobs/",
       {
         method: "POST",
         headers: {
@@ -31,7 +31,7 @@ const App = () => {
   // Delete job
   const deleteJob = async (id) => {
     const res = await fetch(
-      `https://api.npoint.io/c52856f85451cfce135d/jobs/${id}`,
+      `https://my-json-server.typicode.com/tinykocholo/karyab-react/jobs/${id}`,
       {
         method: "DELETE",
       }
@@ -42,7 +42,7 @@ const App = () => {
   // Edit job
   const editJob = async (job) => {
     const res = await fetch(
-      `https://api.npoint.io/c52856f85451cfce135d/jobs/${job.id}`,
+      `https://my-json-server.typicode.com/tinykocholo/karyab-react/jobs/${job.id}`,
       {
         method: "PUT",
         headers: {

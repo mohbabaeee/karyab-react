@@ -1,6 +1,4 @@
-# Karyab Application
-
-Job Finding Front-End
+# Karyab - Job Finding Application
 
 - Modern and User Friendly
 - Fully Responsive
@@ -8,7 +6,7 @@ Job Finding Front-End
 
 Features that the app lacks?
 
-- better JSON fetching (Now JSON fetches from my github repo and you cant add or delete data but the logic is coded😅)
+- Building BackEnd (Now JSON file fetches from my github repo and you cant add or delete data but the logic is coded😅)
 - Categories by Job fields and City
 - Search by Title
 - ~~There is 404 Page but it should be **Without** Navbar and Footer~~ (Fixed)

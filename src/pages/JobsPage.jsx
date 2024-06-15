@@ -8,8 +8,8 @@ const JobsPage = ({ ishome = false }) => {
   useEffect(() => {
     const fetchJobs = async () => {
       const apiUrl = ishome
-        ? "https://api.npoint.io/c52856f85451cfce135d/jobs/?_limit=3"
-        : "https://api.npoint.io/c52856f85451cfce135d/jobs/";
+        ? "https://my-json-server.typicode.com/tinykocholo/karyab-react/jobs/?_limit=3"
+        : "https://my-json-server.typicode.com/tinykocholo/karyab-react/jobs/";
       try {
         const res = await fetch(apiUrl);
         const data = await res.json();
