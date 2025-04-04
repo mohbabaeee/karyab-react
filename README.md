@@ -19,9 +19,9 @@ Features that the app lacks?
 
 <div style="display: flex; justify-content: center; gap: 20px;">
     <div style="border-radius: 10px; padding: 5px;">
-        <img src="https://raw.githubusercontent.com/tinykocholo/karyab-react/main/public/screenshot2.png" alt="Mobile" style="border-radius: 10px;">
+        <img src="https://raw.githubusercontent.com/mohbabaeee/karyab-react/main/public/screenshot2.png" alt="Mobile" style="border-radius: 10px;">
     </div>
     <div style="border-radius: 10px; padding: 5px;">
-        <img src="https://raw.githubusercontent.com/tinykocholo/karyab-react/main/public/screenshot.png" alt="Desktop" style="border-radius: 10px;">
+        <img src="https://raw.githubusercontent.com/mohbabaeee/karyab-react/main/public/screenshot.png" alt="Desktop" style="border-radius: 10px;">
     </div>
 </div>

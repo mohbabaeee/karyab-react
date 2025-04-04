@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaTelegramPlane } from "react-icons/fa";
+import { FaGithub, FaTelegramPlane } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -14,7 +14,7 @@ const Footer = () => {
         </div>
         <div className="flex flex-row gap-8">
           <a
-            href="https://github.com/tinykocholo"
+            href="https://github.com/mohbabaeee"
             type="button"
             target="_blank"
             className="p-2 rounded-xl dark:hover:bg-gray-800 hover:bg-gray-100"
@@ -22,21 +22,14 @@ const Footer = () => {
             <FaGithub />
           </a>
           <a
-            href="https://t.me/+989384794953"
+            href="https://t.me/mohbabaeee"
             type="button"
             target="_blank"
             className="p-2 rounded-xl dark:hover:bg-gray-800 hover:bg-gray-100"
           >
             <FaTelegramPlane />
           </a>
-          <a
-            href="https://www.linkedin.com/in/mohamad-babaee-a28293299/"
-            type="button"
-            target="_blank"
-            className="p-2 rounded-xl dark:hover:bg-gray-800 hover:bg-gray-100"
-          >
-            <FaLinkedin />
-          </a>
+        
         </div>
       </div>
     </footer>

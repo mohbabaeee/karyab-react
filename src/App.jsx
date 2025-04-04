@@ -16,7 +16,7 @@ const App = () => {
   // Add job
   const addJob = async (newJob) => {
     const res = await fetch(
-      "https://my-json-server.typicode.com/tinykocholo/karyab-react/jobs/",
+      "https://my-json-server.typicode.com/mohbabaeee/karyab-react/jobs/",
       {
         method: "POST",
         headers: {
@@ -31,7 +31,7 @@ const App = () => {
   // Delete job
   const deleteJob = async (id) => {
     const res = await fetch(
-      `https://my-json-server.typicode.com/tinykocholo/karyab-react/jobs/${id}`,
+      `https://my-json-server.typicode.com/mohbabaeee/karyab-react/jobs/${id}`,
       {
         method: "DELETE",
       }
@@ -42,7 +42,7 @@ const App = () => {
   // Edit job
   const editJob = async (job) => {
     const res = await fetch(
-      `https://my-json-server.typicode.com/tinykocholo/karyab-react/jobs/${job.id}`,
+      `https://my-json-server.typicode.com/mohbabaeee/karyab-react/jobs/${job.id}`,
       {
         method: "PUT",
         headers: {

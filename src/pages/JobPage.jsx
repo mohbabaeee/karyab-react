@@ -119,7 +119,7 @@ const JobPage = ({ deleteJob }) => {
 
 const jobLoader = async ({ params }) => {
   const res = await fetch(
-    `https://my-json-server.typicode.com/tinykocholo/karyab-react/jobs/${params.id}`
+    `https://my-json-server.typicode.com/mohbabaeee/karyab-react/jobs/${params.id}`
   );
   const data = await res.json();
   return data;

@@ -8,8 +8,8 @@ const JobsPage = ({ ishome = false }) => {
   useEffect(() => {
     const fetchJobs = async () => {
       const apiUrl = ishome
-        ? "https://my-json-server.typicode.com/tinykocholo/karyab-react/jobs/?_limit=3"
-        : "https://my-json-server.typicode.com/tinykocholo/karyab-react/jobs/";
+        ? "https://my-json-server.typicode.com/mohbabaeee/karyab-react/jobs/?_limit=3"
+        : "https://my-json-server.typicode.com/mohbabaeee/karyab-react/jobs/";
       try {
         const res = await fetch(apiUrl);
         const data = await res.json();
