@@ -14,7 +14,7 @@ Features that the app lacks?
 - ✅ Fixed-top-navbar
 - ✅ Hamburger menu on the Phone
 
-[![](https://img.shields.io/badge/Live_At-Here-green.svg)](https://boring-goldberg-bzfhz5rx8.liara.run/)
+[![](https://img.shields.io/badge/Live_At-Here-green.svg)](https://karyab.vercel.app/)
 
 
 <div style="display: flex; justify-content: center; gap: 20px;">
